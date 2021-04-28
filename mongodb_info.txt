@@ -1,0 +1,8 @@
+
+username: reactreservedb
+password: reactreservedb1234
+
+uri: mongodb+srv://reactreservedb:reactreservedb1234@reactreserve.p1lcw.mongodb.net/reactreserve?retryWrites=true&w=majority
+
+install mongoimport/export:
+brew install mongodb/brew/mongodb-database-tools
