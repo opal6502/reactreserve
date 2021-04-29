@@ -1,25 +1,22 @@
 import React from 'react';
 import axios from 'axios';
 
-function Home({ products }) {
-  // console.log(products);
-  // React.useEffect(() => {
-  //   getProducts();
-  // }, []);
+import baseUrl from '../utils/baseUrl';
 
-  // async function getProducts() {
-  //   const url = 'http://localhost:3000/api/products';
-  //   const response = await axios.get(url);
-  //   // console.log(response);
-  // }
-  return <>home</>;
+import ProductList from '../components/Index/ProductList';
+
+function Home({ products }) {
+  return <ProductList products={products} />;
 }
 
 Home.getInitialProps = async () => {
   // fetch data on server
-  const url = 'http://localhost:3000/api/products';
+  const url = `${baseUrl}/api/products`;
+
   const response = await axios.get(url);
+
   // return response data as object
+  // console.log(response);
   return { products: response.data };
   // note: this object will be merged with existing props
 };
